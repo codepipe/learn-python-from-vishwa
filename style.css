@@ -1,4 +1,5 @@
 /* Global Styles */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,40 +9,47 @@ body {
 
 /* Header Styles */
 header {
-    color: #333333; /* Dark gray text */
-    padding: 10px 0;
+    background-color: #222; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center; /* Centered header text */
 }
 
 header h1 {
     margin: 0;
-    text-align: center;
-    color: #333333; /* Dark gray text */
+    font-size: 2em;
+    color: #ffffff; /* White text */
 }
 
 /* Navigation Styles */
+nav {
+    background-color: #333; /* Darker gray background */
+    color: #ffffff; /* White text */
+    padding: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 nav li {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+    margin: 0 15px; /* Spacing between navigation items */
 }
 
 nav a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #007bff; /* Blue color for links */
-    border-bottom: 1px solid #ccc;
-    background-color: transparent; /* No background color */
+    color: #ffffff; /* White link color */
 }
 
 nav a:hover {
-    /* No background color or text color change on hover */
+    background-color: #007bff; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 /* Main Content Styles */
@@ -52,11 +60,11 @@ main {
 
 /* Footer Styles */
 footer {
-    color: #333333; /* Dark gray text */
+    background-color: #222; /* Dark gray background */
+    color: #ffffff; /* White text */
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
-
