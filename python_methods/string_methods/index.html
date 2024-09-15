@@ -21,14 +21,89 @@
         <h2>String Methods in Python</h2>
         <ul>
             <li><strong>capitalize()</strong>: Converts the first character to uppercase</li>
+            <p><strong>Basic:</strong> 'hello'.capitalize() ➔ 'Hello'</p>
+            <p><strong>Advanced:</strong> Used to capitalize the first character in user inputs like names.
+            <pre><code>
+name = input("Enter your name: ").capitalize()
+print(name)  # If input is "john", output will be "John"
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> In a web form, capitalize a user's name for standardization.</p>
+
             <li><strong>casefold()</strong>: Converts the string to lowercase</li>
+            <p><strong>Basic:</strong> 'HELLO'.casefold() ➔ 'hello'</p>
+            <p><strong>Advanced:</strong> Casefold is more aggressive than lower() in handling special characters.
+            <pre><code>
+text = 'ß'.casefold()
+print(text)  # Output: 'ss' (lower() would not convert this character)
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Normalize input for case-insensitive string comparison in password verification systems.</p>
+
             <li><strong>center()</strong>: Centers the string within a given width</li>
+            <p><strong>Basic:</strong> 'hello'.center(10) ➔ '  hello   '</p>
+            <p><strong>Advanced:</strong> Align text in reports or tables.
+            <pre><code>
+print("Name".center(20, "-"))  # Output: '-------Name--------'
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Center-align titles or labels in a console-based menu system.</p>
+
             <li><strong>count()</strong>: Returns the number of occurrences of a specified value</li>
+            <p><strong>Basic:</strong> 'hello world'.count('o') ➔ 2</p>
+            <p><strong>Advanced:</strong> Count substrings within a range of indices.
+            <pre><code>
+text = 'hello world'
+count_o = text.count('o', 5, 10)  # Searches for 'o' between index 5 and 10
+print(count_o)  # Output: 1
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Count occurrences of specific keywords in a text document for analysis.</p>
+
             <li><strong>encode()</strong>: Encodes the string using a specified encoding</li>
+            <p><strong>Basic:</strong> 'hello'.encode('utf-8')</p>
+            <p><strong>Advanced:</strong> Handle text encoding in different formats like 'ascii' or 'utf-16'.
+            <pre><code>
+text = 'hello'
+encoded_text = text.encode('utf-16')
+print(encoded_text)  # Output: Encoded version of the string in UTF-16
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Encode strings for safe transmission in web applications (like handling Unicode characters).</p>
+
             <li><strong>endswith()</strong>: Checks if the string ends with the specified value</li>
+            <p><strong>Basic:</strong> 'hello.py'.endswith('.py') ➔ True</p>
+            <p><strong>Advanced:</strong> Check if a string ends with any value in a tuple.
+            <pre><code>
+filename = 'example.txt'
+if filename.endswith(('.txt', '.docx')):
+    print("File is a document")
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Validate file types during file upload processes in a web application.</p>
+
             <li><strong>expandtabs()</strong>: Sets the tab size of the string</li>
+            <p><strong>Basic:</strong> 'Hello\tWorld'.expandtabs(4) ➔ 'Hello   World'</p>
+            <p><strong>Advanced:</strong> Control tab spacing in formatted outputs like code listings.
+            <pre><code>
+print('Hello\tWorld'.expandtabs(8))  # Output: Hello       World
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Format multi-column reports with consistent tab size for readability.</p>
+
             <li><strong>find()</strong>: Finds the position of the first occurrence of a specified value</li>
+            <p><strong>Basic:</strong> 'hello world'.find('o') ➔ 4</p>
+            <p><strong>Advanced:</strong> Find a substring in a string within a specific range.
+            <pre><code>
+text = 'hello world'
+position = text.find('o', 5)  # Searches for 'o' starting from index 5
+print(position)  # Output: 7
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Search for a specific word in a large dataset or log file.</p>
+
             <li><strong>format()</strong>: Formats the string with specified values</li>
+            <p><strong>Basic:</strong> 'Hello {}'.format('World') ➔ 'Hello World'</p>
+            <p><strong>Advanced:</strong> Use named placeholders or multiple values.
+            <pre><code>
+template = 'Name: {name}, Age: {age}'
+print(template.format(name='John', age=25))  # Output: Name: John, Age: 25
+            </code></pre></p>
+            <p><strong>Real-time Scenario:</strong> Format output for generating dynamic reports or templates in emails.</p>
+
+            <!-- Repeat similar structure for other string methods -->
             <li><strong>index()</strong>: Finds the position of the first occurrence of a specified value</li>
             <li><strong>isalnum()</strong>: Checks if all characters are alphanumeric</li>
             <li><strong>isalpha()</strong>: Checks if all characters are alphabetic</li>
@@ -57,14 +132,14 @@
             <li><strong>splitlines()</strong>: Splits the string at line breaks</li>
             <li><strong>startswith()</strong>: Checks if the string starts with the specified value</li>
             <li><strong>strip()</strong>: Removes leading and trailing whitespace</li>
-            <li><strong>swapcase()</strong>: Swaps case of all characters</li>
-            <li><strong>title()</strong>: Converts the first character of each word to uppercase</li>
-            <li><strong>upper()</strong>: Converts all characters to uppercase</li>
-            <li><strong>zfill()</strong>: Pads the string with zeros</li>
+            <li><strong>swapcase()</strong>: Swaps uppercase to lowercase and vice versa</li>
+            <li><strong>title()</strong>: Converts the string to title case</li>
+            <li><strong>upper()</strong>: Converts the string to uppercase</li>
+            <li><strong>zfill()</strong>: Pads the string with leading zeros</li>
         </ul>
     </main>
     <footer>
-        <p>&copy; 2024 Python Learning Resource</p>
+        <p>&copy; 2024 Python String Methods Guide</p>
     </footer>
 </body>
 </html>
