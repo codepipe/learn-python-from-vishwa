@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Methods</title>
     <link rel="stylesheet" href="../../style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .method-section {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,124 +39,220 @@
     </header>
     <main>
         <h2>String Methods in Python</h2>
+        
+        <h3>List of String Methods</h3>
         <ul>
-            <li><strong>capitalize()</strong>: Converts the first character to uppercase</li>
-            <p><strong>Basic:</strong> 'hello'.capitalize() ➔ 'Hello'</p>
-            <p><strong>Advanced:</strong> Used to capitalize the first character in user inputs like names.
-            <pre><code>
-name = input("Enter your name: ").capitalize()
-print(name)  # If input is "john", output will be "John"
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> In a web form, capitalize a user's name for standardization.</p>
-
-            <li><strong>casefold()</strong>: Converts the string to lowercase</li>
-            <p><strong>Basic:</strong> 'HELLO'.casefold() ➔ 'hello'</p>
-            <p><strong>Advanced:</strong> Casefold is more aggressive than lower() in handling special characters.
-            <pre><code>
-text = 'ß'.casefold()
-print(text)  # Output: 'ss' (lower() would not convert this character)
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Normalize input for case-insensitive string comparison in password verification systems.</p>
-
-            <li><strong>center()</strong>: Centers the string within a given width</li>
-            <p><strong>Basic:</strong> 'hello'.center(10) ➔ '  hello   '</p>
-            <p><strong>Advanced:</strong> Align text in reports or tables.
-            <pre><code>
-print("Name".center(20, "-"))  # Output: '-------Name--------'
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Center-align titles or labels in a console-based menu system.</p>
-
-            <li><strong>count()</strong>: Returns the number of occurrences of a specified value</li>
-            <p><strong>Basic:</strong> 'hello world'.count('o') ➔ 2</p>
-            <p><strong>Advanced:</strong> Count substrings within a range of indices.
-            <pre><code>
-text = 'hello world'
-count_o = text.count('o', 5, 10)  # Searches for 'o' between index 5 and 10
-print(count_o)  # Output: 1
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Count occurrences of specific keywords in a text document for analysis.</p>
-
-            <li><strong>encode()</strong>: Encodes the string using a specified encoding</li>
-            <p><strong>Basic:</strong> 'hello'.encode('utf-8')</p>
-            <p><strong>Advanced:</strong> Handle text encoding in different formats like 'ascii' or 'utf-16'.
-            <pre><code>
-text = 'hello'
-encoded_text = text.encode('utf-16')
-print(encoded_text)  # Output: Encoded version of the string in UTF-16
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Encode strings for safe transmission in web applications (like handling Unicode characters).</p>
-
-            <li><strong>endswith()</strong>: Checks if the string ends with the specified value</li>
-            <p><strong>Basic:</strong> 'hello.py'.endswith('.py') ➔ True</p>
-            <p><strong>Advanced:</strong> Check if a string ends with any value in a tuple.
-            <pre><code>
-filename = 'example.txt'
-if filename.endswith(('.txt', '.docx')):
-    print("File is a document")
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Validate file types during file upload processes in a web application.</p>
-
-            <li><strong>expandtabs()</strong>: Sets the tab size of the string</li>
-            <p><strong>Basic:</strong> 'Hello\tWorld'.expandtabs(4) ➔ 'Hello   World'</p>
-            <p><strong>Advanced:</strong> Control tab spacing in formatted outputs like code listings.
-            <pre><code>
-print('Hello\tWorld'.expandtabs(8))  # Output: Hello       World
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Format multi-column reports with consistent tab size for readability.</p>
-
-            <li><strong>find()</strong>: Finds the position of the first occurrence of a specified value</li>
-            <p><strong>Basic:</strong> 'hello world'.find('o') ➔ 4</p>
-            <p><strong>Advanced:</strong> Find a substring in a string within a specific range.
-            <pre><code>
-text = 'hello world'
-position = text.find('o', 5)  # Searches for 'o' starting from index 5
-print(position)  # Output: 7
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Search for a specific word in a large dataset or log file.</p>
-
-            <li><strong>format()</strong>: Formats the string with specified values</li>
-            <p><strong>Basic:</strong> 'Hello {}'.format('World') ➔ 'Hello World'</p>
-            <p><strong>Advanced:</strong> Use named placeholders or multiple values.
-            <pre><code>
-template = 'Name: {name}, Age: {age}'
-print(template.format(name='John', age=25))  # Output: Name: John, Age: 25
-            </code></pre></p>
-            <p><strong>Real-time Scenario:</strong> Format output for generating dynamic reports or templates in emails.</p>
-
-            <!-- Repeat similar structure for other string methods -->
-            <li><strong>index()</strong>: Finds the position of the first occurrence of a specified value</li>
-            <li><strong>isalnum()</strong>: Checks if all characters are alphanumeric</li>
-            <li><strong>isalpha()</strong>: Checks if all characters are alphabetic</li>
-            <li><strong>isascii()</strong>: Checks if all characters are ASCII</li>
-            <li><strong>isdecimal()</strong>: Checks if all characters are decimal</li>
-            <li><strong>isdigit()</strong>: Checks if all characters are digits</li>
-            <li><strong>isidentifier()</strong>: Checks if the string is a valid identifier</li>
-            <li><strong>islower()</strong>: Checks if all characters are lowercase</li>
-            <li><strong>isnumeric()</strong>: Checks if all characters are numeric</li>
-            <li><strong>isprintable()</strong>: Checks if all characters are printable</li>
-            <li><strong>isspace()</strong>: Checks if all characters are whitespace</li>
-            <li><strong>istitle()</strong>: Checks if the string is a title</li>
-            <li><strong>isupper()</strong>: Checks if all characters are uppercase</li>
-            <li><strong>join()</strong>: Joins elements of a list into a string</li>
-            <li><strong>ljust()</strong>: Left-aligns the string within a given width</li>
-            <li><strong>lstrip()</strong>: Removes leading whitespace</li>
-            <li><strong>partition()</strong>: Splits the string into a 3-tuple</li>
-            <li><strong>replace()</strong>: Replaces a specified value with another value</li>
-            <li><strong>rfind()</strong>: Finds the position of the last occurrence of a specified value</li>
-            <li><strong>rindex()</strong>: Finds the position of the last occurrence of a specified value</li>
-            <li><strong>rjust()</strong>: Right-aligns the string within a given width</li>
-            <li><strong>rpartition()</strong>: Splits the string into a 3-tuple</li>
-            <li><strong>rsplit()</strong>: Splits the string into a list</li>
-            <li><strong>rstrip()</strong>: Removes trailing whitespace</li>
-            <li><strong>split()</strong>: Splits the string into a list</li>
-            <li><strong>splitlines()</strong>: Splits the string at line breaks</li>
-            <li><strong>startswith()</strong>: Checks if the string starts with the specified value</li>
-            <li><strong>strip()</strong>: Removes leading and trailing whitespace</li>
-            <li><strong>swapcase()</strong>: Swaps uppercase to lowercase and vice versa</li>
-            <li><strong>title()</strong>: Converts the string to title case</li>
-            <li><strong>upper()</strong>: Converts the string to uppercase</li>
-            <li><strong>zfill()</strong>: Pads the string with leading zeros</li>
+            <li><a href="#capitalize">capitalize()</a></li>
+            <li><a href="#casefold">casefold()</a></li>
+            <li><a href="#center">center()</a></li>
+            <li><a href="#count">count()</a></li>
+            <li><a href="#encode">encode()</a></li>
+            <li><a href="#endswith">endswith()</a></li>
+            <li><a href="#expandtabs">expandtabs()</a></li>
+            <li><a href="#find">find()</a></li>
+            <li><a href="#format">format()</a></li>
+            <li><a href="#index">index()</a></li>
+            <li><a href="#isalnum">isalnum()</a></li>
+            <li><a href="#isalpha">isalpha()</a></li>
+            <li><a href="#isascii">isascii()</a></li>
+            <li><a href="#isdecimal">isdecimal()</a></li>
+            <li><a href="#isdigit">isdigit()</a></li>
+            <li><a href="#isidentifier">isidentifier()</a></li>
+            <li><a href="#islower">islower()</a></li>
+            <li><a href="#isnumeric">isnumeric()</a></li>
+            <li><a href="#isprintable">isprintable()</a></li>
+            <li><a href="#isspace">isspace()</a></li>
+            <li><a href="#istitle">istitle()</a></li>
+            <li><a href="#isupper">isupper()</a></li>
+            <li><a href="#join">join()</a></li>
+            <li><a href="#ljust">ljust()</a></li>
+            <li><a href="#lstrip">lstrip()</a></li>
+            <li><a href="#partition">partition()</a></li>
+            <li><a href="#replace">replace()</a></li>
+            <li><a href="#rfind">rfind()</a></li>
+            <li><a href="#rindex">rindex()</a></li>
+            <li><a href="#rjust">rjust()</a></li>
+            <li><a href="#rpartition">rpartition()</a></li>
+            <li><a href="#rsplit">rsplit()</a></li>
+            <li><a href="#rstrip">rstrip()</a></li>
+            <li><a href="#split">split()</a></li>
+            <li><a href="#splitlines">splitlines()</a></li>
+            <li><a href="#startswith">startswith()</a></li>
+            <li><a href="#strip">strip()</a></li>
+            <li><a href="#swapcase">swapcase()</a></li>
+            <li><a href="#title">title()</a></li>
+            <li><a href="#upper">upper()</a></li>
+            <li><a href="#zfill">zfill()</a></li>
         </ul>
+
+        <div id="capitalize" class="method-section">
+            <h3>1. capitalize()</h3>
+            <p><strong>Use Cases:</strong> Converts the first character of a string to uppercase.</p>
+            <p><strong>Scenario:</strong> Used to format user input or titles where the first letter should be capitalized.</p>
+            
+            <h4>Examples:</h4>
+            <table>
+                <tr>
+                    <th>Code Level</th>
+                    <th>Code Example</th>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td>
+                        <pre><code>
+text = 'hello'
+result = text.capitalize()
+print(result)  # Output: 'Hello'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>
+                        <pre><code>
+def capitalize_name(name):
+    return name.capitalize()
+
+print(capitalize_name('john doe'))  # Output: 'John doe'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>
+                        <pre><code>
+def capitalize_title(title):
+    return ' '.join(word.capitalize() for word in title.split())
+
+print(capitalize_title('the quick brown fox'))  # Output: 'The Quick Brown Fox'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Real-time</td>
+                    <td>
+                        <pre><code>
+user_input = input("Enter your full name: ").capitalize()
+print(f"Hello, {user_input}!")  # If user enters 'jane doe', output will be 'Hello, Jane doe!'
+                        </code></pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="casefold" class="method-section">
+            <h3>2. casefold()</h3>
+            <p><strong>Use Cases:</strong> Converts the string to lowercase, more aggressively than lower().</p>
+            <p><strong>Scenario:</strong> Useful for case-insensitive comparisons, especially with Unicode text.</p>
+            
+            <h4>Examples:</h4>
+            <table>
+                <tr>
+                    <th>Code Level</th>
+                    <th>Code Example</th>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td>
+                        <pre><code>
+text = 'HELLO'
+result = text.casefold()
+print(result)  # Output: 'hello'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>
+                        <pre><code>
+def normalize_text(text):
+    return text.casefold()
+
+print(normalize_text('Thérè'))  # Output: 'thère'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>
+                        <pre><code>
+def find_casefolded(text, search_term):
+    return text.casefold().find(search_term.casefold())
+
+print(find_casefolded('Python programming', 'PYTHON'))  # Output: 0
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Real-time</td>
+                    <td>
+                        <pre><code>
+email = input("Enter your email address: ").casefold()
+print(f"Your email is: {email}")  # Email normalization for database storage
+                        </code></pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="center" class="method-section">
+            <h3>3. center()</h3>
+            <p><strong>Use Cases:</strong> Centers the string within a given width.</p>
+            <p><strong>Scenario:</strong> Useful for formatting text output in a console or report.</p>
+            
+            <h4>Examples:</h4>
+            <table>
+                <tr>
+                    <th>Code Level</th>
+                    <th>Code Example</th>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td>
+                        <pre><code>
+text = 'hello'
+result = text.center(10)
+print(result)  # Output: '  hello   '
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>
+                        <pre><code>
+def format_title(title):
+    return title.center(30, '*')
+
+print(format_title('Report Title'))  # Output: '**********Report Title**********'
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>
+                        <pre><code>
+def pretty_print(text, width):
+    return '\n'.join(line.center(width) for line in text.splitlines())
+
+print(pretty_print('Header\nSubheader\nContent', 50))
+                        </code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Real-time</td>
+                    <td>
+                        <pre><code>
+invoice_number = '123456'
+formatted_invoice = invoice_number.center(20, '0')
+print(f"Invoice Number: {formatted_invoice}")  # Output: '00000001234560'
+                        </code></pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Add similar sections for each string method here -->
+
     </main>
     <footer>
         <p>&copy; 2024 Python String Methods Guide</p>
