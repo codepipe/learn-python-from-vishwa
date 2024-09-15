@@ -46,8 +46,7 @@ nav a {
 
 nav a:hover {
     background-color: #e74c3c; /* Bright Red on hover */
-    color: #2c3e50; /* Dark Slate Blue text color remains the same */
-    /* No transition effect */
+    /* No change to text color on hover */
 }
 
 /* Main Content Styles */
