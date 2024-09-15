@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling in Python</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Error Handling in Python</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Error Handling</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Error Handling in Python</h2>
+        <p>Error handling in Python is done using <code>try</code>, <code>except</code>, <code>else</code>, and <code>finally</code> blocks.</p>
+        <h3>Try and Except</h3>
+        <p>Use <code>try</code> to test a block of code, and <code>except</code> to handle exceptions.</p>
+        <pre><code>try:
+    # Code that may cause an exception
+except SomeException:
+    # Code that runs if an exception occurs
+</code></pre>
+        <h3>Else and Finally</h3>
+        <p><code>else</code> runs if no exception is raised, and <code>finally</code> runs regardless of whether an exception occurred or not.</p>
+        <pre><code>try:
+    # Code that may cause an exception
+except SomeException:
+    # Code that runs if an exception occurs
+else:
+    # Code that runs if no exception occurs
+finally:
+    # Code that always runs
+</code></pre>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Learning Resource</p>
+    </footer>
+</body>
+</html>
+
