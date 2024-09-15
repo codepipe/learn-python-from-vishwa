@@ -1,5 +1,4 @@
 /* Global Styles */
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,11 +41,7 @@ nav a {
     font-family: Arial, sans-serif; /* Ensure consistent font family */
     font-size: 16px; /* Ensure consistent font size */
     font-weight: normal; /* Ensure consistent font weight */
-}
-
-nav a:hover {
-    background-color: #e74c3c; /* Bright Red on hover */
-    /* No change to text color on hover */
+    background-color: transparent; /* No background color */
 }
 
 /* Main Content Styles */
