@@ -42,13 +42,12 @@ nav a {
     font-family: Arial, sans-serif; /* Ensure consistent font family */
     font-size: 16px; /* Ensure consistent font size */
     font-weight: normal; /* Ensure consistent font weight */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 nav a:hover {
     background-color: #e74c3c; /* Bright Red on hover */
     color: #2c3e50; /* Dark Slate Blue text color remains the same */
-    /* No additional font styling here */
+    /* No transition effect */
 }
 
 /* Main Content Styles */
