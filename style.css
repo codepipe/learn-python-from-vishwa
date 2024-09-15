@@ -1,23 +1,22 @@
 /* Global Styles */
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: blue; /* changed to blue */
+    background-color: #fafafa; /* Very Light Gray */
 }
 
 /* Header Styles */
 header {
-    background-color: blue; /* changed to blue */
-    color: green; /* changed to green */
+    background-color: #9b59b6; /* Purple */
+    color: #ffffff; /* White text */
     padding: 10px 0;
 }
 
 header h1 {
     margin: 0;
     text-align: center;
-    color: green; /* changed to green */
+    color: #ffffff; /* White text */
 }
 
 /* Navigation Styles */
@@ -37,27 +36,29 @@ nav a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: green; /* changed to green */
+    color: #9b59b6; /* Purple for links */
     border-bottom: 1px solid #ccc;
 }
 
 nav a:hover {
-    background-color: #f0f0f0;
+    background-color: #f39c12; /* Gold on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 /* Main Content Styles */
 main {
     padding: 20px;
-    color: green; /* changed to green */
+    color: #2d3436; /* Charcoal for text */
 }
 
 /* Footer Styles */
 footer {
-    background-color: blue; /* changed to blue */
-    color: green; /* changed to green */
+    background-color: #9b59b6; /* Purple */
+    color: #ffffff; /* White text */
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
