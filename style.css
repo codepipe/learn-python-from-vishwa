@@ -9,15 +9,14 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #2c3e50; /* Dark Slate Blue */
-    color: #ffffff; /* White text */
+    color: #333333; /* Dark gray text */
     padding: 10px 0;
 }
 
 header h1 {
     margin: 0;
     text-align: center;
-    color: #ffffff; /* White text */
+    color: #333333; /* Dark gray text */
 }
 
 /* Navigation Styles */
@@ -25,40 +24,39 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left;
+    display: flex; /* Flexbox layout for horizontal arrangement */
+    justify-content: center; /* Center the list items horizontally */
 }
 
 nav li {
-    display: block;
-    margin-bottom: 10px;
+    margin-right: 20px; /* Space between list items */
+}
+
+nav li:last-child {
+    margin-right: 0; /* Remove margin on the last item */
 }
 
 nav a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #2c3e50; /* Dark Slate Blue for links */
-    border-bottom: 1px solid #ccc;
-}
-
-nav a:hover {
-    background-color: #e74c3c; /* Bright Red on hover */
-    color: #ffffff; /* White text on hover */
+    color: #007bff; /* Blue color for links */
+    background-color: transparent; /* No background color */
 }
 
 /* Main Content Styles */
 main {
     padding: 20px;
-    color: #2c3e50; /* Dark Slate Blue for text */
+    color: #333333; /* Dark gray text */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #2c3e50; /* Dark Slate Blue */
-    color: #ffffff; /* White text */
+    color: #333333; /* Dark gray text */
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
