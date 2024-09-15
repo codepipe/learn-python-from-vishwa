@@ -1,109 +1,59 @@
 /* Global Styles */
-/* General styling for body and header */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #ffffff; /* White background */
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
+    color: #333333; /* Dark gray text */
+    padding: 10px 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    text-align: center;
+    color: #333333; /* Dark gray text */
 }
 
+/* Navigation Styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main content styling */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-}
-
-/* Method box styling */
-.method-box {
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.method-box h3 {
-    font-size: 20px;
-    color: #333;
-    margin-top: 0;
-}
-
-.method-box p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Example box styling */
-.example-box {
-    border: 1px dashed #666;
-    background-color: #e8f4fc;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.example-box h4 {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-    color: #444;
-}
-
-.example-box code {
+nav li {
     display: block;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    margin-bottom: 10px;
 }
 
-/* Footer styling */
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+    border-bottom: 1px solid #ccc;
+    background-color: transparent; /* No background color */
+}
+
+nav a:hover {
+    /* No background color or text color change on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    color: #333333; /* Dark gray text */
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
+    color: #333333; /* Dark gray text */
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -111,8 +61,4 @@ footer {
     bottom: 0;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
 
