@@ -95,6 +95,7 @@
                 <tr>
                     <th>Code Level</th>
                     <th>Code Example</th>
+                    <th>Output</th>
                 </tr>
                 <tr>
                     <td>Basic</td>
@@ -102,40 +103,43 @@
                         <pre><code>
 text = 'hello'
 result = text.capitalize()
-print(result)  # Output: 'Hello'
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>Hello</code></pre></td>
                 </tr>
                 <tr>
                     <td>Intermediate</td>
                     <td>
                         <pre><code>
-def capitalize_name(name):
-    return name.capitalize()
-
-print(capitalize_name('john doe'))  # Output: 'John doe'
+text = 'john doe'
+result = text.capitalize()
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>John doe</code></pre></td>
                 </tr>
                 <tr>
                     <td>Advanced</td>
                     <td>
                         <pre><code>
-def capitalize_title(title):
-    return ' '.join(word.capitalize() for word in title.split())
-
-print(capitalize_title('the quick brown fox'))  # Output: 'The Quick Brown Fox'
+text = 'the quick brown fox'
+result = ' '.join(word.capitalize() for word in text.split())
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>The Quick Brown Fox</code></pre></td>
                 </tr>
                 <tr>
                     <td>Real-time</td>
                     <td>
                         <pre><code>
-user_input = input("Enter your full name: ").capitalize()
-print(f"Hello, {user_input}!")  # If user enters 'jane doe', output will be 'Hello, Jane doe!'
+user_input = 'jane doe'
+result = user_input.capitalize()
+print(f"Hello, {result}!")
                         </code></pre>
                     </td>
+                    <td><pre><code>Hello, Jane doe!</code></pre></td>
                 </tr>
             </table>
         </div>
@@ -150,6 +154,7 @@ print(f"Hello, {user_input}!")  # If user enters 'jane doe', output will be 'Hel
                 <tr>
                     <th>Code Level</th>
                     <th>Code Example</th>
+                    <th>Output</th>
                 </tr>
                 <tr>
                     <td>Basic</td>
@@ -157,40 +162,44 @@ print(f"Hello, {user_input}!")  # If user enters 'jane doe', output will be 'Hel
                         <pre><code>
 text = 'HELLO'
 result = text.casefold()
-print(result)  # Output: 'hello'
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>hello</code></pre></td>
                 </tr>
                 <tr>
                     <td>Intermediate</td>
                     <td>
                         <pre><code>
-def normalize_text(text):
-    return text.casefold()
-
-print(normalize_text('Thérè'))  # Output: 'thère'
+text = 'Thérè'
+result = text.casefold()
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>thère</code></pre></td>
                 </tr>
                 <tr>
                     <td>Advanced</td>
                     <td>
                         <pre><code>
-def find_casefolded(text, search_term):
-    return text.casefold().find(search_term.casefold())
-
-print(find_casefolded('Python programming', 'PYTHON'))  # Output: 0
+text = 'Python programming'
+search_term = 'PYTHON'
+result = text.casefold().find(search_term.casefold())
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>0</code></pre></td>
                 </tr>
                 <tr>
                     <td>Real-time</td>
                     <td>
                         <pre><code>
-email = input("Enter your email address: ").casefold()
-print(f"Your email is: {email}")  # Email normalization for database storage
+email = 'USER@DOMAIN.COM'
+normalized_email = email.casefold()
+print(f"Your email is: {normalized_email}")
                         </code></pre>
                     </td>
+                    <td><pre><code>Your email is: user@domain.com</code></pre></td>
                 </tr>
             </table>
         </div>
@@ -205,6 +214,7 @@ print(f"Your email is: {email}")  # Email normalization for database storage
                 <tr>
                     <th>Code Level</th>
                     <th>Code Example</th>
+                    <th>Output</th>
                 </tr>
                 <tr>
                     <td>Basic</td>
@@ -212,20 +222,21 @@ print(f"Your email is: {email}")  # Email normalization for database storage
                         <pre><code>
 text = 'hello'
 result = text.center(10)
-print(result)  # Output: '  hello   '
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>  hello   </code></pre></td>
                 </tr>
                 <tr>
                     <td>Intermediate</td>
                     <td>
                         <pre><code>
-def format_title(title):
-    return title.center(30, '*')
-
-print(format_title('Report Title'))  # Output: '**********Report Title**********'
+text = 'Python'
+result = text.center(20, '-')
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>------Python-------</code></pre></td>
                 </tr>
                 <tr>
                     <td>Advanced</td>
@@ -234,9 +245,16 @@ print(format_title('Report Title'))  # Output: '**********Report Title**********
 def pretty_print(text, width):
     return '\n'.join(line.center(width) for line in text.splitlines())
 
-print(pretty_print('Header\nSubheader\nContent', 50))
+text = 'Header\nSubheader\nContent'
+result = pretty_print(text, 50)
+print(result)
                         </code></pre>
                     </td>
+                    <td><pre><code>
+                  Header                  
+               Subheader               
+                 Content                
+</code></pre></td>
                 </tr>
                 <tr>
                     <td>Real-time</td>
@@ -244,9 +262,10 @@ print(pretty_print('Header\nSubheader\nContent', 50))
                         <pre><code>
 invoice_number = '123456'
 formatted_invoice = invoice_number.center(20, '0')
-print(f"Invoice Number: {formatted_invoice}")  # Output: '00000001234560'
+print(f"Invoice Number: {formatted_invoice}")
                         </code></pre>
                     </td>
+                    <td><pre><code>Invoice Number: 00000001234560</code></pre></td>
                 </tr>
             </table>
         </div>
